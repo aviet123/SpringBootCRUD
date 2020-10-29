@@ -7,7 +7,7 @@
 <body>
 <h1>Products Management</h1>
 <p>
-    <a href="/products/create">Create new product</a>
+    <a href="/products/create" >Create new product</a>
 </p>
 <table border="1" id="categoryList" style="width: 50%">
     <tr>
@@ -22,6 +22,7 @@
             <td th:text="${p.name}"></td>
             <td th:text="${p.price}"></td>
             <td th:text="${p.category.name}"></td>
+            <td><img th:src="@{${p.img}}"></td>
             <td><a th:href="@{'/products/edit/'+${p.id}}">Edit</a></td>
             <td><a th:href="@{'/products/delete/'+${p.id}}">Delete</a></td>
         </tr>

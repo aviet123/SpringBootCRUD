@@ -27,7 +27,7 @@ public class ProductController {
         return categoryService.findAll();
     }
 
-    @GetMapping("")
+    @GetMapping("/getAll")
     public String getIndex(Model model){
         model.addAttribute("products",productService.findAll());
         return "index";
@@ -51,7 +51,7 @@ public class ProductController {
         if (product.isPresent()){
             productService.remove(id);
         }else
-            return "notfound";
+            return "error";
         return "redirect:/products";
     }
 

@@ -14,10 +14,20 @@ public class Product {
     private String name;
     private double price;
 
+    private String img;
+
     @ManyToOne
     private Category category;
 
     public Product() {
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
     }
 
     public Long getId() {
